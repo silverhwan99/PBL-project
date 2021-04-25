@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+
+int main(void) {
+	int i;
+	int j;
+	int s1[10];
+	
+
+	for (i = 0;i < 9;i++) {  // 9번 자연수를 입력받고 배열에 저장한다
+		int n;
+		scanf("%d", &n);
+		s1[i] = n;
+	}
+
+	int max = s1[0];
+	int a;
+
+	for (j = 1;j < 9;j++) {    //입력한 모든 자연수를 비교하여 최대값을 찾는다
+		if (max < s1[j]) {
+			max = s1[j];
+			a = j+1;   //몇 번째인지 찾는다
+		}
+	}
+
+	printf("%d\n",max);
+	printf("%d", a);
+
+	return 0;
+}

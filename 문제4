@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void) {
+	int n; 
+	scanf("%d", &n); //몇 개까지의 별을 만들지 입력
+	int i;
+	int j;
+	for (i = 0;i < n;i++) {
+		for (j = 0;j <= i;j++) {
+			printf("*"); // 각 줄에 별 출력
+		}
+		printf("\n"); //각 줄에서 별을 출력하고 줄 띄우기
+	}
+	return 0;
+}

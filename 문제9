@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(void) {
+	int H; //시간(24시간 사용)
+	int M; //분
+	scanf("%d %d", &H, &M); //시간과 분을 입력받는다.
+
+	int resultM = M - 45; //45분 이른 알람을 설정
+
+	if (H == 0) { //H가 0일 경우 
+		if (resultM < 0) { // H가 -1이 될 경우
+			int actM = 45 - M;
+			int actualM = 60 - actM;
+			int actH = 23;
+			printf("%d %d", actH, actualM);
+		}
+		else {
+			printf("%d %d", H, resultM);
+		}
+	}
+
+	else if (resultM < 0) { // 예외적인 케이스
+		int actM = 45 - M;
+		int actualM = 60 - actM;
+		int actualH = H - 1;
+		//만약 -분이 나올때 시간에서 -1을 하고 60진법에 맞게 계산
+		printf("%d %d", actualH, actualM); //출력
+
+	}
+
+	else { //그 외에 모든 케이스 계산
+		printf("%d %d", H, resultM); //출력
+	}
+
+	return 0;
+}

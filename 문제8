@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+
+int main(void) {
+	int a;
+	int b;
+	int c;
+	int x = 0;
+
+	scanf("%d", &a); //A 값 입력
+	scanf("%d", &b); //B 값 입력
+	scanf("%d", &c); //C 값 입력
+	
+	int sum1=0;
+	int sum2=0;
+	while(sum1>=sum2){ //판매비용이 고정비용+가변비용보다 커질 때 까지 개수를 높인다
+		x = x + 1;
+		sum1 = a + (b * x);
+		sum2 = c * x;
+	}
+
+	printf("%d", x);
+
+	return 0;
+}

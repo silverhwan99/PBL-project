@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+	int a; // 낮 올라가는 길이
+	int b; // 밤 떨어지는 길이
+	int v; // 총 길이
+	int x = 0;
+	scanf_s("%d %d %d", &a, &b, &v); // 입력
+	int result = 0;
+	int count = 0;
+
+	while (result < v) { // 올라간 길이, 총길이 비교
+		x = x + 1;
+		result = a * x - b * x;
+	}
+	printf("%d", x); //  출력
+	return 0;
+}

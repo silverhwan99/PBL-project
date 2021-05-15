@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main(void) {
+	int a, b, c; // 세변의 길이
+	int big; // 빗변의 길이
+
+	scanf_s("%d %d %d", &a, &b, &c); // 세변 입력
+
+	// 세변중 제일 큰 값 빗변 탐색
+	if (a > b) {
+		if (a > c) {
+			big = a;
+		}
+		else
+			big = c;
+	}
+	else {
+		if (b > c) {
+			big = b;
+		}
+		else
+			big = c;
+	}
+
+	// 각 변을 제곱한 값
+	int newa, newb, newc;
+	newa = a * a;
+	newb = b * b;
+	newc = c * c;
+
+	// 피타고라스 정리로 직사각형인지 확인
+	if (big == a) {
+		if (newa == newb + newc)
+			printf("직사각형이 맞습니다.");
+		else
+			printf("직사각형이 아닙니다.");
+	}
+	else if (big == b) {
+		if (newb == newa+newc)
+			printf("직사각형이 맞습니다.");
+		else
+			printf("직사각형이 아닙니다.");
+	}
+	else {
+		if (newc == newa+newb)
+			printf("직사각형이 맞습니다.");
+		else
+			printf("직사각형이 아닙니다.");
+	}
+
+	return 0;
+}

@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+#define MAX 10
+
+int sorted[MAX]; // 정렬될 배열
+
+void merge(int list[], int left, int mid, int right) {
+	// i는 정렬된 왼쪽리스트에 대한 인덱스
+	// j는 정렬된 오른쪽리스트에 대한 인덱스
+	// k는 정렬될 리스트에 대한 인덱스
+	int i, j, k, l;
+	i = left;j = mid + 1;k = left;
+
+	// 분할되어 정렬된 리스트들의 합병
+	while (i <= mid && j <= right) {
+		if (list[i] <= list[j]) sorted[k++] = list[i++];
+		else sorted[k++] = list[j++];
+	}
+	if (i < mid) { // 남아있는 레코드의 일괄 복사
+		for (l = j;l <= right;l++) {
+			sorted[k++] = list[l];
+		}
+	}
+	else {  // 남아있는 레코드의 일괄 복사
+		for (l = i;l <= mid;l++) {
+			sorted[k++] = list[l];
+		}
+	}
+
+	// 정렬된 리스트 sorted[]를 list[]에 복사
+	for (l = left;l <= right;l++) {
+		list[l] = sorted[l];
+	}
+}
+
+void merge_sort(int list[], int left, int right) {
+	int mid;
+	if (left < right) {
+		mid = (right + left) / 2;  // 리스트들의 균등분할
+		merge_sort(list, left, mid); // 분할된 리스트 정렬
+		merge_sort(list, mid + 1, right);// 분할된 리스트 정렬
+		merge(list, left, mid, right); // 리스트 합병
+	}
+}
+
+int main(void) {
+	int list[MAX];
+	int num;
+	int n;
+	scanf_s("%d", &n);
+
+	for (int i = 0;i < n;i++) {
+		scanf_s("%d", &num);
+		list[i] = num;
+	}
+
+	merge_sort(list, 0, n - 1);
+
+	for (int j = 0; j < n;j++) {
+		printf("%d ", list[j]);
+	}
+
+	return 0;
+}

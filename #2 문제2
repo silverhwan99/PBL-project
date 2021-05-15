@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+	char num[100]; // 문자열
+	scanf_s("%s", num, 100); // 값 입력
+
+	if (num[2]-'0' >= 5) { // 소숫점 둘째자리가 5이상
+		if (num[1]-'0' == 9) { // 소숫점 첫째자리가 9일 때
+			if (num[0]-'0' == 9) { // 일의 자리수가 9일 때
+				num[1]= '0';
+				num[0]= '1';  // 자릿수가 늘어남
+				printf("%d.%d*10^%d", num[0] - '0', num[1] - '0', strlen(num));
+			}
+			else { // 일의 자리가 1 증가
+				printf("%d.0*10^%d", ((num[0] - '0')+1), (strlen(num) - 1));
+			}
+		}
+		else { // 소숫점 첫째자리가	1 증가
+			printf("%d.%d*10^%d", num[0] - '0', ((num[1] - '0')+1), (strlen(num) - 1));
+		}
+	}
+	else { // 소숫점 둘째자리부터 모두 0이 됨
+		printf("%d.%d*10^%d", num[0] - '0', num[1] - '0', (strlen(num) - 1));
+	}
+	return 0;
+}

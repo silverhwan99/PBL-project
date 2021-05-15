@@ -1,0 +1,28 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main() {
+	int num;
+	scanf("%d", &num);
+	int a;
+	int b;
+	int result;
+	int count = 0;
+
+	for (a = 1;a <= 9;a++) { // a는 1 이상 9 이하 수
+		for (b = 1;b <= 9;b++) { // b는 1 이상 9 이하 수
+			result = a * b;  // 두 수의 곱
+			if (result == num) { // 두 수의 곱이 입력받은 수와 같을 때
+				count++;
+			}
+		}
+	}
+
+	if (count > 0) { // 두 수를 곱해서 입력받은 수와 같을 때가 1번이상일 때
+		printf("YES");
+	}
+	else {
+		printf("NO");
+	}
+	return 0;
+}

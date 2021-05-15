@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define CRT_SECURE_N0_WARNINGS
+
+int main(void) {
+	int A, B, C;			//변수 선언
+	scanf_s("%d", &A);		//변수 입력
+	scanf_s("%d", &B);
+	scanf_s("%d", &C);
+
+	int cal = A * B * C;	//문제에 따라 계산
+	int list[10] = { 0, };	//배열 선언 및 초기화
+
+	while (cal > 0) {		//10으로 나눈 몫이 0이 될 때까지 반복
+		list[cal % 10]++;	//10으로 나눈 나머지 저장 후 인덱스 증가
+		cal /= 10;			//10으로 나눈 몫 cal에 저장
+	}
+
+	for (int i = 0; i < 10; i++) {	//출력
+		printf("%d\n", list[i]++);
+	}
+
+	return 0;
+}

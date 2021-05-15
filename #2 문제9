@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+	int sugar;				//변수 선언
+	int count = 0;			//설탕 봉지 개수 세기
+	scanf_s("%d", &sugar);	//입력 받음
+
+	while (sugar > 0) {
+		if (sugar % 5 == 0) {	//5로 나누었을 때 나머지가 0일때
+			sugar -= 5;			//5kg 감소
+			count++;
+		}
+		else if (sugar % 3 == 0) {	//3으로 나누었을 때 나머지가 0일때
+			sugar -= 3;			//3kg 감소
+			count++;
+		}
+		else if (sugar > 5) {	//5로 나누어 떨어지지 않지만 클때
+			sugar -= 5;			//5kg 감소
+			count++;
+		}
+		else {
+			count = -1;			//나머지 경우 (sugar < 5)
+			break;
+		}
+	}
+	printf("%d", count);
+	return 0;
+}

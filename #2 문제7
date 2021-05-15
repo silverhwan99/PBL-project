@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+//리스트노드 정의
+typedef struct Listnode {
+	int data;
+	struct Listnode* link;
+}Listnode;
+
+// 리스트 앞머리에 추가
+Listnode* insert_first(Listnode* head, int value) {
+	Listnode* p = (Listnode*)malloc(sizeof(Listnode)); // 새로추가할 노드 생성
+	p->data = value; // 값을 넣음
+	p->link = head; // 링크를 head로 함
+	head = p; // head가 처음이 됨
+	return head;
+}
+
+void print_list(Listnode* head) {
+	// 노드 처음 부터 끝까지 생성
+	for (Listnode* p = head;p != NULL;p = p->link) {
+		printf("%d->", p->data);
+	}
+	printf("NULL\n");
+}
+
+Listnode* search_list(Listnode* head, int x) {
+	Listnode* p = head;
+	// 리스트에서 원하는 값 탐색
+	while (p != NULL) {
+		if (p->data == x) return p;
+		p = p->link;
+	}
+	return NULL; // 탐색 실패
+}
+
+int main(void) {
+	Listnode* head = NULL;
+
+	head = insert_first(head, 10);
+	print_list(head);
+	head = insert_first(head, 20);
+	print_list(head);
+	head = insert_first(head, 30);
+	print_list(head);
+	if (search_list(head, 30) != NULL) {
+		printf("리스트에서 30을 찾았습니다.\n");
+	}
+	else
+		printf("리스트에서 30을 찾지 못했습니다.\n");
+
+	return 0;
+}

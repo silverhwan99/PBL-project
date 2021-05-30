@@ -1,0 +1,45 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void) {
+
+	int num;
+	// 줄 수 입력
+	scanf("%d", &num);
+	int number = num * 2 - 1;
+
+	// 윗 줄 반복
+	for (int i = 0;i < number/2 ;i++) {
+		// 공백 반복
+		for (int j = 0; j < i;j++) {
+			printf(" ");
+		}
+		// 별 반복
+		for (int j = number;j > i*2;j = j--) {
+			printf("*");
+		}
+		// 줄 띄움
+		printf("\n");
+	}
+	// 중간 공백 및 별 출력
+	for (int i = 0;i < number / 2;i++) {
+		printf(" ");
+	}
+	printf("*\n");
+
+	// 아랫 줄 반복
+	for (int i = number / 2 - 1;i >= 0; i--) {
+		// 공백 반복
+		for (int j = 0; j < i;j++) {
+			printf(" ");
+		}
+		// 별 반복
+		for (int j = i * 2;j < number;j++) {
+			printf("*");
+		}
+		// 줄 띄움
+		printf("\n");
+	}
+
+	return 0;
+}

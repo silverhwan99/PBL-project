@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+// 최대공약수
+int gcd(int a, int b) {
+	int c;
+	// 최대공약수가 나올 때까지 반복
+	while (b != 0) {
+		c = a % b;
+		a = b;
+		b = c;
+	}
+	return a;
+}
+
+int main(void) {
+	int N, M;
+	int result = 1;
+	int gcd1;
+	// 두 수 입력
+	scanf("%d %d", &N, &M);
+	// 반복해서 곱하기
+	for (int i = 1; i <= N;i++) {
+		for (int j = 1; j <= M;j++) {
+			gcd1 = gcd(i, j);
+			result = result * gcd1;
+		}
+	}
+
+	printf("%d", result);
+	return 0;
+}

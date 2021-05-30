@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+int main() {
+	int num;				//테스트 케이스
+	int x1, y1, x2, y2;		//좌표
+	int r1, r2;				//거리 값 = 원의 범위
+
+	double distance = 0;
+
+	scanf("%d", &num);
+
+	for (int i = 0; i < num; i++) {
+		scanf_s("%d %d %d %d %d %d", &x1, &y1, &r1, &x2, &y2, &r2);
+
+		distance = sqrt(pow((x1 - x2), 2) + pow((y1 - y2), 2));	//피타고라스 정리
+
+		if (r1 + r2 < distance)				//서로 범위가 안겹침
+			printf("0\n");
+		else if (abs(r1 - r2) > distance)	//하나의 범위가 다른 범위를 포함
+			printf("0\n");
+		else if (distance == 0 && r1 == r2)	//범위 일치
+			printf("-1\n");
+		else if (distance == (r1 + r2))		//범위가 딱일치
+			printf("1\n");
+		else if (distance == abs(r1 - r2))	//범위가 내접
+			printf("1\n");
+		else
+			printf("2\n");			//그 의외
+	}
+
+	return 0;
+}

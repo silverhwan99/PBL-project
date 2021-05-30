@@ -1,0 +1,40 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+
+int main(void) {
+	int burger;
+	int drink;
+
+	// 첫번째 버거 가격 입력
+	scanf("%d", &burger);
+	int cheap1 = burger;
+
+	// 버거 가격 비교
+	for (int i = 0;i < 2;i++) {
+		scanf("%d", &burger);
+		// 다른 버거 가격이랑 비교하여 가장 작은 가격 찾기
+		if (cheap1 > burger) {
+			cheap1 = burger;
+		}
+	}
+
+	// 첫번째 음료 가격 입력
+	scanf("%d", &drink);
+	int cheap2 = drink;
+
+	// 음료 가격 비교
+	for (int j = 0;j < 1;j++) {
+		scanf("%d", &drink);
+		// 다른 음료 가격이랑 비교하여 가장 작은 가격 찾기
+		if (cheap2 > drink) {
+			cheap2 = drink;
+		}
+	}
+
+	// 가장 싼 가격
+	int result = cheap1 + cheap2 - 50;
+	printf("%d", result);
+
+	return 0;
+}

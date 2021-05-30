@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+
+int main(void) {
+    int N, F, temp;
+    int i;
+
+    scanf("%d %d", &N, &F);
+
+    N = (N / 100) * 100;            //마지막 두자리를 00으로 바꿈
+
+    for (i = 0; i < 100; i++) {     //나누어 떨어지는 최솟값 구하기
+        temp = N;
+        if ((temp += i) % F == 0)
+            break;
+    }
+
+    if (i < 10) {                   //한자리인 경우
+        printf("0");
+        printf("%d", i);
+    }
+    return 0;
+}

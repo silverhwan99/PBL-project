@@ -1,0 +1,38 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define MAXSIZE 10
+
+// 삽입정렬
+void insertion_sort(int list[], int n) {
+    int i, j, k;
+    for (i = 1;i < n;i++) {
+        // 정렬되어 있지 않은 수
+        k = list[i];
+        // 정렬되도록 앞뒤를 바꿈
+        for (j = i - 1;j >= 0 && list[j] > k;j--) {
+            list[j + 1] = list[j];
+        }
+        // 삽입
+        list[j + 1] = k;
+    }
+}
+
+int main(void) {
+    int i;
+    int n = MAXSIZE;
+    srand(time(NULL));
+    int list[MAXSIZE];
+    for (i = 0;i < n;i++) {
+        list[i] = rand() % 100;
+    }
+    insertion_sort(list, n);
+    for (int i = 0;i < n;i++) {
+        printf("%d ",list[i]);
+    }
+    printf("\n");
+
+
+    return 0;
+}

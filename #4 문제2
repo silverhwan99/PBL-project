@@ -1,0 +1,18 @@
+#define CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+// 팩토리얼 함수
+int factorial(int n) {
+    if (n > 2)
+       // 재귀함수 반복
+        n *= factorial(n - 1);
+    return n;
+}
+
+int main(void) {
+    int num, result = 1;
+    scanf("%d", &num);
+    if (num != 0)
+        result = factorial(num);
+    printf("%d", result);
+}

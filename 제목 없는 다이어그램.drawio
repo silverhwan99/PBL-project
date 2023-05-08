@@ -1,9 +1,66 @@
-<mxfile host="app.diagrams.net" modified="2023-05-08T03:58:11.178Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" version="21.2.9" etag="6h7VosKmGaZeO2_nkmLy" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-08T04:06:19.455Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="Nr0bPKhssbNMNlfoxKm-" version="21.2.9" type="github">
   <diagram name="페이지-1" id="ELx1i3Xwi2_TM-Sc_OXU">
-    <mxGraphModel>
+    <mxGraphModel dx="1050" dy="541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-10" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="gIPb5uAs08i73NZ-T_hJ-1" target="gIPb5uAs08i73NZ-T_hJ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-1" value="AC 220V" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="250" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-11" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gIPb5uAs08i73NZ-T_hJ-2" target="gIPb5uAs08i73NZ-T_hJ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-12" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gIPb5uAs08i73NZ-T_hJ-2" target="gIPb5uAs08i73NZ-T_hJ-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-13" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gIPb5uAs08i73NZ-T_hJ-2" target="gIPb5uAs08i73NZ-T_hJ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-2" value="AC-DC&lt;br&gt;컨버터" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-15" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gIPb5uAs08i73NZ-T_hJ-3" target="gIPb5uAs08i73NZ-T_hJ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-3" value="DC-DC&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;컨버터" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-16" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="gIPb5uAs08i73NZ-T_hJ-4" target="gIPb5uAs08i73NZ-T_hJ-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-4" value="DC-DC&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;컨버터" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-14" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="gIPb5uAs08i73NZ-T_hJ-5" target="gIPb5uAs08i73NZ-T_hJ-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-5" value="DC-DC&lt;br&gt;컨버터" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-6" value="서보 모터" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="95" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-8" value="서보 모터" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="175" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-9" value="젯슨 나노" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="255" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-17" value="12V&lt;br&gt;200W" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-20" value="5V&lt;br&gt;5.4W" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="80" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-22" value="5V&lt;br&gt;20W" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gIPb5uAs08i73NZ-T_hJ-23" value="5V&lt;br&gt;5.4W" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
